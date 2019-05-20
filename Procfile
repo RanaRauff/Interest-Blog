@@ -1,0 +1,1 @@
+web: gunicorn big_data_pro.wsgi

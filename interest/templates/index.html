@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOME </title>
+
+  <!-- Bootstrap -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/animate.css">
+  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/jquery.bxslider.css">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+    Theme Name: MeFamily
+    Theme URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+        <a class="navbar-brand" href="{% url 'home' %}"><span>Welcome {{ user.username }}</span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <div class="menu">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li role="presentation"><a href="{% url 'ourstory' %}">Our Story</a></li>
+            <li role="presentation"><a href="/post/new/">Upload Post</a></li>
+            <li role="presentation"><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li role="presentation"><a href="{% url 'logout' %}">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slider">
+    <div class="img-responsive">
+      <ul class="bxslider">
+      	{% for post in posts %}
+<li><img src="{{ post.image.url }}" height="500" width="100" alt="" /></li> 
+      	{% endfor %}
+
+        <!-- <li><img src="{{ post.image.url }}" alt="" /></li> -->
+        <!-- <li><img src="/static/images/9.jpg" alt="" /></li> -->
+        <!-- <li><img src="/static/images/7.jpg" alt="" /></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <h1>HOME</h1>
+    <p>
+      Presenting the new way of Social Media.<br>
+      For better world and WEB.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="col-md-6">
+      <img src="img/10.jpg" alt="" class="img-responsive" />
+    </div>
+    <div class="col-md-6">
+      <img src="img/11.jpg" alt="" class="img-responsive" />
+    </div>
+  </div>
+  <section class="box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="services">
+              <a href="{% url 'ourstory' %}"><div class="icons">
+                <i class="fa fa-heart-o fa-3x"></i></a>
+              
+              </div>
+              <a href="{% url 'ourstory' %}"><h4>Our Story</h4></a>
+              <p>
+                Have a look at your latest Feeds!
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="col-md-4">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
+            <div class="services">
+              <a href="{% url 'gallery' %}"><div class="icons">
+                <i class="fa fa-camera fa-3x"></i>
+              </div></a>
+              <a href="{% url 'gallery' %}"><h4>Gallery</h4></a>
+              <p>
+                World Of Photographs.
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 f-about">
+            <a href="index.html"><h1>!nterest</h1></a>
+            <p>We possess within us two minds. So far I have written only of the conscious mind. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. So open up your second mind for the new way for sharing love with your close ones</p>
+
+          </div>
+          <div class="col-md-4 l-posts">
+            <h3 class="widgetheading">Latest Posts</h3>
+            <ul>
+              {% for post in posts %}
+              <li><a href="#">{{post.content}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-4 f-contact">
+            <h3 class="widgetheading">Stay in touch</h3>
+            <a href="#">
+              <p><i class="fa fa-envelope"></i> ateam@gmail.com</p>
+            </a>
+            <p><i class="fa fa-phone"></i> 0001212</p>
+            <p><i class="fa fa-home"></i> !nterest inc | JIIT , Noida-128 <br> India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-div">
+      <div class="container">
+        <div class="row">
+          <div class="copyright">
+            !interest
+            <div class="credits">
+              A platform to share love with photos.
+              <!-- Designed by <a href="https://bootstrapmade.com/"></a> -->
+            </div>
+          </div>
+
+<!-- 
+          <ul class="social-network">
+            <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/static/js/jquery-2.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/wow.min.js"></script>
+  <script src="/static/js/jquery.easing.1.3.js"></script>
+  <script src="/static/js/jquery.bxslider.min.js"></script>
+  <script src="/static/js/jquery.isotope.min.js"></script>
+  <script src="/static/js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/static/js/functions.js"></script>
+  <!-- <script>
+    wow = new WOW({}).init();
+  </script> -->
+
+</body>
+
+</html>

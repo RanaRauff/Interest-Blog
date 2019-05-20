@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Story</title>
+
+  <!-- Bootstrap -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/animate.css">
+  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/jquery.bxslider.css">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+    Theme Name: MeFamily
+    Theme URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home' %}"><span>{{ user.username }}</span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <div class="menu">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
+            <li role="presentation" ><a href="ourstory.html">Our Story</a></li>
+            <li role="presentation" class="active"><a href="/post/new/">Upload Post</a></li>
+            <!-- <li role="presentation"><a href="events.html">Events</a></li> -->
+            <li role="presentation"><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li role="presentation"><a href="{%url 'logout'%}">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <h2>Our Story</h2>
+  </div>
+  <div class="ourstory">
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <img src="img/9.jpg" alt="" class="img-responsive" />
+        <p>
+          This web app is made with the aim of compeleting our big data project.
+          We have leveraged MongoDB as our Backend database in our state-of-the art photosharing web platform.
+        </p>
+        <p>
+          We have used python Django Framework.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="recent">
+          <h3>Upload Post</h3>
+        </div>
+        <div id="sendmessage">Your post has been uploaded. Thank you!</div>
+        <div id="errormessage"></div>
+        <form action="" method="post" role="form" class="contactForm" enctype="multipart/form-data">
+          {% csrf_token %}
+
+
+          <div class="form-group">
+            <input type="text" name="title" class="form-control" id="title" placeholder="Title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="tags" id="tags" placeholder="Your Tag"  />
+            <div class="validation"></div>
+          </div>
+
+<!-- ================================================================================================================= -->
+
+
+<div class="wrap-input100">
+        <div class="form-group">
+          <span class="label-input100">Upload Photo</span>
+    <div class="input-group input-file" name="image">
+      
+      <span class="input-group-btn">
+            <button class="btn btn-default btn-choose" type="button">Choose</button>
+        </span>
+        
+        <input type="text" class="form-control" placeholder='Choose a file...' />
+        <span class="input-group-btn">
+             <button class="btn btn-warning btn-reset" type="button">Reset</button>
+        </span>
+    </div>
+  </div></div>
+
+
+
+<!-- ================================================================================================================= -->
+
+
+
+<!-- 
+          <div class="form-group">
+            <input type="File" class="form-control" name="file" id="file" placeholder="File"  />
+            <div class="validation"></div>
+          </div> -->
+          <div class="form-group">
+            <textarea class="form-control" name="content" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+            <div class="validation"></div>
+          </div>
+
+          <div class="text-center"><button type="submit" class="btn btn-primary btn-lg">Upload Post</button></div>
+        </form>
+      </div>
+
+      <!-- <div class="col-lg-6">
+        <div class="recent">
+          <h3>Get in touch with us</h3>
+        </div>
+        <div class="">
+          <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum.</p>
+          <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum.</p>
+
+          <h4>Address:</h4>Little Lonsdale St, New York<br>
+          <h4>Telephone:</h4>345 578 59 45 416</br>
+          <h4>Fax:</h4>123 456 789
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <br>
+
+  
+  <footer>
+    <div class="inner-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 f-about">
+            <a href="index.html"><h1>!nterest</h1></a>
+            <p>We possess within us two minds. So far I have written only of the conscious mind. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. So open up your second mind for the new way for sharing love with your close ones</p>
+
+          </div>
+          <div class="col-md-4 l-posts">
+            <h3 class="widgetheading">Latest Posts</h3>
+            <ul>
+              {% for post in posts %}
+              <li><a href="#">{{post.content}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-md-4 f-contact">
+            <h3 class="widgetheading">Stay in touch</h3>
+            <a href="#">
+              <p><i class="fa fa-envelope"></i> ateam@gmail.com</p>
+            </a>
+            <p><i class="fa fa-phone"></i> 0001212</p>
+            <p><i class="fa fa-home"></i> !nterest inc | JIIT , Noida-128 <br> India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last-div">
+      <div class="container">
+        <div class="row">
+          <div class="copyright">
+            !interest
+            <div class="credits">
+              A platform to share love with photos.
+              <!-- Designed by <a href="https://bootstrapmade.com/"></a> -->
+            </div>
+          </div>
+
+<!-- 
+          <ul class="social-network">
+            <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest fa-1x"></i></a></li>
+            <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/static/js/jquery-2.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/wow.min.js"></script>
+  <script src="/static/js/jquery.easing.1.3.js"></script>
+  <script src="/static/js/jquery.bxslider.min.js"></script>
+  <script src="/static/js/jquery.isotope.min.js"></script>
+  <script src="/static/js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/static/js/functions.js"></script>
+  <script>
+    wow = new WOW({}).init();
+  </script>
+  <script >function bs_input_file() {
+  $(".input-file").before(
+    function() {
+      if ( ! $(this).prev().hasClass('input-ghost') ) {
+        var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+        element.attr("name",$(this).attr("name"));
+        element.change(function(){
+          element.next(element).find('input').val((element.val()).split('\\').pop());
+        });
+        $(this).find("button.btn-choose").click(function(){
+          element.click();
+        });
+        $(this).find("button.btn-reset").click(function(){
+          element.val(null);
+          $(this).parents(".input-file").find('input').val('');
+        });
+        $(this).find('input').css("cursor","pointer");
+        $(this).find('input').mousedown(function() {
+          $(this).parents('.input-file').prev().click();
+          return false;
+        });
+        return element;
+      }
+    }
+  );
+}
+$(function() {
+  bs_input_file();
+});</script>
+
+</body>
+
+</html>
