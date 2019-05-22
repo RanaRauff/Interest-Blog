@@ -1,6 +1,7 @@
 # Interest-Blog
 This project contains the deep implementation of a blog cum photo sharing platform, designed to show off various features of the Django web framework. Used MongoDB as a backend database for this Django project, without changing the Django ORM by using Djongo API. Project is currently deployed on Heroku cloud service.<br />
-Used Bootstrap CSS to make our project responsive, which can render excellently on multiple device sizes. A single website which runs on different device sizes such as on large desktop devices, laptop devices, tablet devices and on mobile devices.
+Used Bootstrap CSS to make our project responsive, which can render excellently on multiple device sizes. A single website which runs on different device sizes such as on large desktop devices, laptop devices, tablet devices and on mobile devices.<br />
+##### Link https://interestblog.herokuapp.com/login/
 
 ---
 ### Prerequisites:
