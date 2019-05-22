@@ -35,13 +35,13 @@ the structure of the blog is kept quite manageable and user-friendly.
 <br />
 
 ### How do I run this project locally?
-1. Clone the repository:
-git clone https://github.com/RanaRauff/Interest-Blog.git
-2. Run migrations:
-python manage.py migrate
-3. Create a user:
-python manage.py createsuperuser
-4. Run the server:
-python manage.py runserver
+1. Clone the repository:<br />
+`git clone https://github.com/RanaRauff/Interest-Blog.git`
+2. Run migrations:<br />
+`python manage.py migrate`
+3. Create a user:<br />
+`python manage.py createsuperuser`
+4. Run the server:<br />
+`python manage.py runserver`
 5. And open 127.0.0.1:8000/login in your web browser.
 
