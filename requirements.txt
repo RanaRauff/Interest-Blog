@@ -31,5 +31,5 @@ MarkupSafe==1.0
 protobuf==3.6.1
 PyYAML==3.13
 termcolor==1.1.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 wincertstore==0.2
