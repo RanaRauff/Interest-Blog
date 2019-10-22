@@ -2,7 +2,7 @@ dj-database-url==0.5.0
 Django==2.1.4
 django-heroku==0.3.1
 djongo==1.2.32
-Pillow==5.1.0
+Pillow==6.2.0
 pymongo==3.7.2
 SQLAlchemy==1.2.14
 et-xmlfile==1.0.1
