@@ -29,7 +29,7 @@ Jinja2==2.10
 Markdown==2.6.11
 MarkupSafe==1.0
 protobuf==3.6.1
-PyYAML==3.13
+PyYAML==5.4
 termcolor==1.1.0
 Werkzeug==0.14.1
 wincertstore==0.2
